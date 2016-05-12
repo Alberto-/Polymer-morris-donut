@@ -1,0 +1,13 @@
+{
+  "name": "morris-donut",
+  "description": "Polymer component to create a MorrisJS donut chart",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Alberto Piras"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  }
+}
