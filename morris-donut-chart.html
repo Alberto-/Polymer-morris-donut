@@ -1,0 +1,32 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="morris-donut-chart">
+    <template>
+        <style include="">
+        </style>
+        <div class="">
+            Morris component
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'morris-donut-chart',
+        properties: {
+            elements: String,
+            pressed: {
+                type: Boolean,
+                value: false,
+                notify: true,
+                reflectToAttribute: true
+            }
+        },
+        listeners: {
+            'tap': 'toggle'
+        },
+        toggle: function() {
+            this.pressed = !this.pressed;
+        },
+    });
+</script>
