@@ -20,10 +20,20 @@
             }
 
         </style>
+
+        <iron-ajax
+                id="morrisChartData"
+                url="{{tempUrl}}"
+                handle-as="json"
+                on-request="startRequest"
+                on-response="parseResponse"
+                ></iron-ajax>
+
         <div class="big">
             Morris component
             <div id="donut-example"></div>
         </div>
+
     </template>
 </dom-module>
 
