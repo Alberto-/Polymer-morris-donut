@@ -9,13 +9,10 @@
     <template>
         <style include="">
             :host {
-                width: 100%;
-                height: 100px;
                 text-align: center;
                 position: relative;
             }
             .big{
-                height: 100px;
                 overflow: auto;
             }
 
@@ -56,18 +53,23 @@
         toggle: function() {
             this.pressed = !this.pressed;
         },
-        attached: function() {
-            console.debug(this['is'], "ready!;" );
+//        attached: function() {
+//            console.debug(this['is'], "ready!;" );
+//
+//            // make AJAX REQUEST
+//
+//            Morris.Donut({
+//                element: 'donut-example',
+//                resize: true,
+//                data: this.data,
+//                formatter: function (x) { return x + "%"}
+//            }).on('click', function(i, row){
+//                console.log(i, row);
+//            });
+//
+//        },
 
-            // make AJAX REQUEST
-            this.data =  [
-                {"value": 60, "label": "Opened"},
-                {"value": 25, "label": "Visit website"},
-                {"value": 10, "label": "Registered"},
-                {"value": 5, "label": "Deleted"}
-            ]
-
-
+        renderChart: function () {
             Morris.Donut({
                 element: 'donut-example',
                 resize: true,
@@ -76,7 +78,6 @@
             }).on('click', function(i, row){
                 console.log(i, row);
             });
-
         },
 
         ready: function(){
@@ -92,6 +93,12 @@
         },
         parseResponse:function (event) {
             console.info("read data:" + JSON.stringify(event.detail.response));
+
+            if(!!event.detail.response.chartData){
+
+                this.data = event.detail.response.chartData;
+                this.renderChart();
+            }
 
         }
 
