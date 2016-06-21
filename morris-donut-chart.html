@@ -23,7 +23,7 @@
 
         <iron-ajax
                 id="morrisChartData"
-                url="{{tempUrl}}"
+                url="{{data}}"
                 handle-as="json"
                 on-request="startRequest"
                 on-response="parseResponse"
@@ -33,6 +33,7 @@
             Morris component
             <div id="donut-example"></div>
         </div>
+
     </template>
 </dom-module>
 
@@ -46,7 +47,8 @@
                 value: false,
                 notify: true,
                 reflectToAttribute: true
-            }
+            },
+            data:String
         },
         listeners: {
             'tap': 'toggle'
@@ -75,7 +77,24 @@
                 console.log(i, row);
             });
 
+        },
+
+        ready: function(){
+
+            console.info("Chart json data is :" + this.data);
+
+            this.$.morrisChartData.generateRequest();
+        },
+        startRequest:function () {
+
+            console.info("Start request to chart data");
+
+        },
+        parseResponse:function (event) {
+            console.info("read data:" + JSON.stringify(event.detail.response));
+
         }
+
     });
 
 </script>
