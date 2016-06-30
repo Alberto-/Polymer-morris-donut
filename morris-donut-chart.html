@@ -12,12 +12,7 @@
                 text-align: center;
                 position: relative;
             }
-            .big{
-                overflow: auto;
-            }
-
         </style>
-
         <iron-ajax
                 id="morrisChartData"
                 url="{{data}}"
@@ -25,11 +20,7 @@
                 on-request="startRequest"
                 on-response="parseResponse"
                 ></iron-ajax>
-
-        <div class="big">
-            Morris component
             <div id="donut-example"></div>
-        </div>
 
     </template>
 </dom-module>
@@ -53,21 +44,6 @@
         toggle: function() {
             this.pressed = !this.pressed;
         },
-//        attached: function() {
-//            console.debug(this['is'], "ready!;" );
-//
-//            // make AJAX REQUEST
-//
-//            Morris.Donut({
-//                element: 'donut-example',
-//                resize: true,
-//                data: this.data,
-//                formatter: function (x) { return x + "%"}
-//            }).on('click', function(i, row){
-//                console.log(i, row);
-//            });
-//
-//        },
 
         renderChart: function () {
             Morris.Donut({
