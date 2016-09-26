@@ -20,7 +20,7 @@
                 on-request="startRequest"
                 on-response="parseResponse"
         ></iron-ajax>
-        <div id="chart-render"></div>
+        <div id="chart-Render"></div>
     </template>
 </dom-module>
 
@@ -51,7 +51,7 @@
 
         renderChart: function () {
             Morris.Donut({
-                element: 'chart-render',
+                element: this.$["chart-Render"],
                 resize: true,
                 data: this.data,
                 formatter: function (x) { return x + "%"}
