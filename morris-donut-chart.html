@@ -20,14 +20,15 @@
                 on-request="startRequest"
                 on-response="parseResponse"
         ></iron-ajax>
-        <div id="donut-example"></div>
-
+        <div id="chart-render"></div>
     </template>
 </dom-module>
 
 <script>
     Polymer({
+
         is: 'morris-donut-chart',
+
         properties: {
             elements: String,
             pressed: {
@@ -38,16 +39,19 @@
             },
             data:String
         },
+
         listeners: {
             'tap': 'toggle'
         },
+
         toggle: function() {
+            /*You can insert other additional code like Extra API calls to retrieve more info by a specific chart item*/
             this.pressed = !this.pressed;
         },
 
         renderChart: function () {
             Morris.Donut({
-                element: 'donut-example',
+                element: 'chart-render',
                 resize: true,
                 data: this.data,
                 formatter: function (x) { return x + "%"}
@@ -62,14 +66,15 @@
 
             this.$.morrisChartData.generateRequest();
         },
+
         startRequest:function () {
 
             console.info("Start request to chart data");
 
         },
+
         parseResponse:function (event) {
             console.info("read data:" + JSON.stringify(event.detail.response));
-
             if(!!event.detail.response.chartData){
 
                 this.data = event.detail.response.chartData;
