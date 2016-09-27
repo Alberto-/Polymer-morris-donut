@@ -1,26 +1,34 @@
 # Morris-donut-chart
 
 
-A Polymer web component that allows you to create fast donut charts with the amazing Morris Library.
-You have to specify an address where retrieve the info about the current chart.
-The Morris-donut-chart WC will read from this file and it will render your chart.
+A Polymer web component that allows you to create fast and responsive donut charts with the amazing [Morris.js] library.
+
+You only have to specify an address where retrieve the JSON info about the current chart.
+The component will make an API GET call to that specified endpoint.
 
 
-##How to
 
-Include morris-donut-chart file:
+## Instructions
 
-
-   <link rel="import" href="../morris-donut-chart.html">
+Include morris-donut-chart component:
 
 
-create a chart:
-
-    <morris-donut-chart data="demo.json"></morris-donut-chart>
+`<link rel="import" href="../morris-donut-chart.html">`
 
 
-specify a correct json file or a specific remote endpoint where read info.
+create a chart  and specify a correct json file or a specific remote endpoint where read info.
 
+`<morris-donut-chart data="demo.json"></morris-donut-chart>`
+
+### How to try it out
+
+Create a simple http server , eg with [http-server]
+
+`http-server -a 127.0.0.1 -p 5000`
+
+and then open the demo page
+
+http://localhost:5000/demo/
 
 
 ## ONLINE DEMO
@@ -35,3 +43,6 @@ specify a correct json file or a specific remote endpoint where read info.
 ## License
 
 MIT
+
+   [http-server]: <https://github.com/indexzero/http-server>
+   [Morris.js]: <https://github.com/morrisjs/morris.js/>
