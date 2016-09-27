@@ -31,6 +31,9 @@ and then open the demo page
 http://localhost:5000/demo/
 
 
+![Alt text](https://github.com/Alberto-/morris-donut-component/blob/master/demo/img/MorrisdonutChart.png?raw=true "Morris-donut-chart component examples")
+
+
 ## ONLINE DEMO
 
  Coming soon ...
