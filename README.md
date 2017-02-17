@@ -1,10 +1,11 @@
-# Morris-donut-chart
+# Polymer-morris-donut
 
 
 A Polymer web component that allows you to create fast and responsive donut charts with the amazing [Morris.js] library.
 
 You only have to specify an address where retrieve the JSON info about the current chart.
-The component will make an API GET call to that specified endpoint.
+
+**The component will make an API GET call to that specified endpoint to retrieve data.**
 
 
 
