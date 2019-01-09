@@ -31,6 +31,7 @@
 
         properties: {
             elements: String,
+            colors:[],
             pressed: {
                 type: Boolean,
                 value: false,
@@ -54,6 +55,7 @@
             Morris.Donut({
                 element: this.$["chart-Render"],
                 resize: true,
+                colors:this.colors,
                 data: this.data,
                 formatter: function (x) { return x + "%"}
             }).on('click', function(i, row){
@@ -62,26 +64,28 @@
         },
 
         ready: function(){
-
+            this.checkColors();
             console.info("Chart json data is :" + this.data);
-
+            console.info("Chart colors are :" + this.colors);
             this.$.morrisChartData.generateRequest();
         },
 
         startRequest:function () {
-
             console.info("Start request to chart data");
-
         },
 
         parseResponse:function (event) {
             console.info("read data:" + JSON.stringify(event.detail.response));
             if(!!event.detail.response.chartData){
-
                 this.data = event.detail.response.chartData;
                 this.renderChart();
             }
+        },
 
+        checkColors: function() {
+            if(this.colors){
+                this.colors = this.colors.split(',');
+            }
         }
 
     });

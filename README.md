@@ -17,9 +17,15 @@ Include morris-donut-chart component:
 `<link rel="import" href="../morris-donut-chart.html">`
 
 
-create a chart  and specify a correct json file or a specific remote endpoint where read info.
+Create a chart  and specify a correct json file or a specific remote endpoint where read info.
 
 `<morris-donut-chart data="demo.json"></morris-donut-chart>`
+
+you can also specify colors passing hex codes into element's attribute 'colors'.
+Following an example of Morris donut with Google colors.
+
+`<morris-donut-chart data="demo.json" colors="#4285f4,#ea4335,#fbbc05,#4285f4,#34a853,#ea4335"></morris-donut-chart>`
+
 
 ### How to try it out
 
@@ -31,8 +37,10 @@ and then open the demo page
 
 http://localhost:5000/demo/
 
+![Alt text](https://github.com/Alberto-/morris-donut-component/blob/master/demo/img/MorrisDonutChartColors.png?raw=true "Morris-donut Google colors example")
 
-![Alt text](https://github.com/Alberto-/morris-donut-component/blob/master/demo/img/MorrisdonutChart.png?raw=true "Morris-donut-chart component examples")
+
+![Alt text](https://github.com/Alberto-/morris-donut-component/blob/master/demo/img/MorrisdonutChart.png?raw=true "Morris-donut default version example")
 
 
 ## ONLINE DEMO

@@ -1,0 +1,7 @@
+{
+  "chartData":[
+    {"label": "In-Store Sales", "value": 55},
+    {"label": "Download Sales", "value": 12},
+    {"label": "Mail-Order Sales", "value": 20}
+  ]
+}

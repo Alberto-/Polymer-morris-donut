@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Morris donut</title>
-
     <link rel="import" href="../morris-donut-chart.html">
-
 </head>
+
 <body>
+    <style>
+        h1 {
+            font-family: sans-serif;
+            color: #335067;
+            font-size: 38px;
+            font-weight: 500;
+            margin-left: 1em;
+        }
 
-<style>
+        .class30 {
+            width: 30%;
+            float: left;
+        }
 
-    h1{
-        font-family: sans-serif;
-        color: #335067;
-        font-size: 38px;
-        font-weight: 500;
-        margin-left: 1em;
-    }
+        .class20 {
+            width: 20%;
+            float: left;
+        }
 
-    .class30{
-        width: 30%;
-        float: left;
-    }
-
-    .class20{
-        width: 20%;
-        float: left;
-    }
-
-    .class10{
-        width: 10%;
-        float: left;
-    }
-
-</style>
-<h1>Morris-donut-chart Web Component examples</h1>
-<div class="class30">
-    <morris-donut-chart data="demo.json"></morris-donut-chart>
-</div>
-<div class="class20">
-    <morris-donut-chart data="demo.json"></morris-donut-chart>
-</div>
-<div class="class10">
-    <morris-donut-chart data="demo.json"></morris-donut-chart>
-</div>
-
+        .class10 {
+            width: 10%;
+            float: left;
+        }
+    </style>
+    <h1>Morris-donut-chart Web Component examples</h1>
+    <div class="class30">
+        <morris-donut-chart data="demo.json" colors="#4285f4,#ea4335,#fbbc05,#4285f4,#34a853,#ea4335"></morris-donut-chart>
+    </div>
+    <div class="class20">
+        <morris-donut-chart data="demo.json" colors="#4285f4,#ea4335,#fbbc05,#4285f4,#34a853,#ea4335"></morris-donut-chart>
+    </div>
+    <div class="class10">
+        <morris-donut-chart data="demo.json" colors="#4285f4,#ea4335,#fbbc05,#4285f4,#34a853,#ea4335"></morris-donut-chart>
+    </div>
+    <div class="class10">
+        <morris-donut-chart data="basic.json"></morris-donut-chart>
+    </div>
 </body>
+
 </html>

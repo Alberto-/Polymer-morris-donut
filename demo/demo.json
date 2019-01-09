@@ -1,8 +1,10 @@
 {
   "chartData":[
+    {"label": "Google Donut", "value": 55},
     {"label": "Download Sales", "value": 12},
-    {"label": "In-Store Sales", "value": 55},
-    {"label": "Mail-Order Sales", "value": 20}
+    {"label": "Mail-Order Sales", "value": 20},
+    {"label": "Bookings", "value": 30},
+    {"label": "Invoices", "value": 20},
+    {"label": "Mixed", "value": 20}
   ]
-
 }
